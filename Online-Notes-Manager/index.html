@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Notes Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📝 Online Notes Manager</h1>
+  <p>Save your notes anytime, anywhere</p>
+</header>
+
+<div class="container">
+  <div class="add-note">
+    <input type="text" id="title" placeholder="Note Title">
+    <textarea id="content" placeholder="Write your note here..."></textarea>
+    <button onclick="addNote()">Add Note</button>
+  </div>
+
+  <input type="text" id="search" placeholder="🔍 Search notes..." onkeyup="searchNotes()">
+
+  <div id="notes" class="notes-container"></div>
+</div>
+
+<footer>
+  <p>© 2026 Online Notes Manager | Student Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
