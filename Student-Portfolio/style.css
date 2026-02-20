@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #99cff0, #899ee3);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.hero button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #0077ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #e6e6e6;
+}
+
+/* Navigation */
+nav {
+  background: #797676;
+  text-align: center;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #00f2fe;
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0077ff;
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.skill-box {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Projects */
+.project-card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #0077ff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
