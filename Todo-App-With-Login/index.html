@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App with Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Login Section -->
+<div class="login-box" id="loginBox">
+  <h2>🔐 Login</h2>
+  <input type="text" id="username" placeholder="Enter Username">
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+  <p id="loginMsg"></p>
+</div>
+
+<!-- Todo Section -->
+<div class="todo-box" id="todoBox">
+  <h2>📝 My To-Do List</h2>
+  <button class="logout" onclick="logout()">Logout</button>
+
+  <div class="add-task">
+    <input type="text" id="taskInput" placeholder="Enter new task">
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <ul id="taskList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
