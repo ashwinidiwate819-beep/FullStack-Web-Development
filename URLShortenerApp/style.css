@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f1c574, #e7d98e); /* Orange to yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #ff6600; /* Dark orange heading */
+}
+
+form input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ff9900;
+    margin-right: 10px;
+    font-size: 16px;
+}
+form button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #cc5200;
+}
+
+#result {
+    margin-top: 20px;
+    background: #fff3cc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.short-url-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.short-url-container input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ff9900;
+    font-size: 10px;
+}
+
+.short-url-container button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.short-url-container button:hover {
+    background-color: #cc5200;
+}
+
+.hide { display: none; }
