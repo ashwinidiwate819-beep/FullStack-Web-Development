@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <style>
+        /* Reset & Global */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: linear-gradient(to right, #74ebd5, #ACB6E5); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+
+        h1 { margin: 20px 0; color: #333; text-align: center; }
+
+        /* Form styling */
+        form {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 450px;
+            margin-bottom: 30px;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: #6C63FF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        form button:hover { background: #5752d1; }
+
+        /* Table styling */
+        table {
+            width: 90%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+        th { background: #6C63FF; color: white; }
+        tr:nth-child(even) { background: #f4f4f4; }
+        tr:hover { background: #dcdcff; }
+
+        /* Responsive */
+        @media(max-width: 500px) {
+            th, td { font-size: 14px; padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Registration</h1>
+
+    <form id="registrationForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <select id="event" required>
+            <option value="">Select Event</option>
+            <option value="Tech Conference">Tech Conference</option>
+            <option value="Art Workshop">Art Workshop</option>
+            <option value="Music Festival">Music Festival</option>
+            <option value="Business Seminar">Business Seminar</option>
+        </select>
+        <button type="submit">Register</button>
+    </form>
+
+    <table id="participantsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Event</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        let participants = JSON.parse(localStorage.getItem('participants')) || [];
+
+        const form = document.getElementById('registrationForm');
+        const tableBody = document.querySelector('#participantsTable tbody');
+
+        function displayParticipants() {
+            tableBody.innerHTML = '';
+            participants.forEach((p, index) => {
+                tableBody.innerHTML += `
+                    <tr>
+                        <td>${p.name}</td>
+                        <td>${p.email}</td>
+                        <td>${p.phone}</td>
+                        <td>${p.event}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const event = document.getElementById('event').value;
+
+            // Simple validation
+            if (!name || !email || !phone || !event) {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            participants.push({ name, email, phone, event });
+            localStorage.setItem('participants', JSON.stringify(participants));
+
+            form.reset();
+            displayParticipants();
+            alert("Registration Successful!");
+        });
+
+        // Display saved participants on page load
+        displayParticipants();
+    </script>
+
+</body>
+</html>
