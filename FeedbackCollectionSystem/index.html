@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Collection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Feedback Collection System</h1>
+
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="feedback" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <h2>Submitted Feedbacks</h2>
+    <div id="feedbackList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
