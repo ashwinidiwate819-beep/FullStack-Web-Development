@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Store</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #f4f4f9; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 30px; color: #333; }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+        .product-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover { transform: scale(1.05); }
+        .product-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        .product-card h3 { margin: 10px 0; color: #333; }
+        .product-card p { color: #555; margin-bottom: 10px; }
+        .product-card button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #6C63FF;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .product-card button:hover { background: #5752d1; }
+
+        .cart {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .cart h2 { margin-bottom: 15px; color: #333; text-align: center; }
+        .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ddd; }
+        .cart-item:last-child { border-bottom: none; }
+        .cart-item button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 6px;
+            background: #f44336;
+            color: white;
+            cursor: pointer;
+        }
+        .cart-total { text-align: right; margin-top: 10px; font-weight: bold; font-size: 18px; }
+
+        @media(max-width: 500px) {
+            .cart-item { flex-direction: column; align-items: flex-start; }
+            .cart-total { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple E-Commerce Store</h1>
+
+    <!-- Product Listing -->
+    <div class="products" id="productsContainer"></div>
+
+    <!-- Cart -->
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cartContainer"></div>
+        <div class="cart-total" id="cartTotal">Total: $0</div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Wireless Headphones", price: 50, img: "https://unsplash.com/photos/a-pair-of-headphones-sitting-on-top-of-a-table-qcZpoGO7Sh8" },
+            { id: 2, name: "Smartwatch", price: 80, img: "https://images.unsplash.com/photo-1606813908682-89f9e5e1bbeb?fit=crop&w=400&q=80" },
+            { id: 3, name: "Sneakers", price: 60, img: "https://images.unsplash.com/photo-1528701800484-531b55d3fce6?fit=crop&w=400&q=80" },
+            { id: 4, name: "Backpack", price: 40, img: "https://images.unsplash.com/photo-1593032465173-4db6b59e6d92?fit=crop&w=400&q=80" },
+            { id: 5, name: "Sunglasses", price: 30, img: "https://images.unsplash.com/photo-1580716414210-1b479d6b84bb?fit=crop&w=400&q=80" },
+        ];
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const productsContainer = document.getElementById('productsContainer');
+        const cartContainer = document.getElementById('cartContainer');
+        const cartTotal = document.getElementById('cartTotal');
+
+        function displayProducts() {
+            productsContainer.innerHTML = '';
+            products.forEach(product => {
+                productsContainer.innerHTML += `
+                    <div class="product-card">
+                        <img src="${product.img}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>$${product.price}</p>
+                        <button onclick="addToCart(${product.id})">Add to Cart</button>
+                    </div>
+                `;
+            });
+        }
+
+        function displayCart() {
+            cartContainer.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartContainer.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name} - $${item.price}</span>
+                        <button onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+            });
+            cartTotal.innerText = `Total: $${total}`;
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+            alert(`${product.name} added to cart!`);
+        }
+
+        function removeFromCart(index) {
+            const removed = cart.splice(index, 1)[0];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+            alert(`${removed.name} removed from cart!`);
+        }
+
+        displayProducts();
+        displayCart();
+    </script>
+
+</body>
+</html>
