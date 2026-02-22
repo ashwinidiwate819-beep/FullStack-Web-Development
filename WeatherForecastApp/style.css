@@ -1,0 +1,92 @@
+/* Background: cloudy sky */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* App container styling */
+.app-container {
+    background: rgba(255, 255, 255, 0.85); /* semi-transparent to see clouds */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading */
+h1 {
+    color: #262a4f;
+    margin-bottom: 20px;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #685b98;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b3162;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #453d74;
+}
+
+/* Weather box */
+.weather-box {
+    margin-top: 20px;
+}
+
+.weather-box img {
+    width: 100px;
+    height: 100px;
+}
+
+.city-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4e4a70;
+    margin-bottom: 10px;
+}
+
+.weather-desc {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #1b1b35;
+}
+
+.weather-info {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.hide {
+    display: none;
+}
