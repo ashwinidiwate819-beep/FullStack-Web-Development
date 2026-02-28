@@ -13,7 +13,7 @@ const wind = document.getElementById('wind');
 async function getWeather(city) {
     try {
         const response = await fetch(
-            https://www.weatherlink.com/map
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
         );
         if (!response.ok) {
             alert("City not found!");
