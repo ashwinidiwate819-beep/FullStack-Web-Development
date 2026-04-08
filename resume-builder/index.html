@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📄 Smart Resume Builder</h1>
+    <p>Create a professional resume in minutes</p>
+</header>
+
+<div class="app">
+
+    <!-- Form Section -->
+    <div class="form-section">
+        <h2>Enter Your Details</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone Number">
+        <input type="text" id="role" placeholder="Job Title">
+
+        <textarea id="summary" placeholder="Professional Summary"></textarea>
+
+        <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+
+        <textarea id="education" placeholder="Education Details"></textarea>
+
+        <textarea id="experience" placeholder="Work Experience"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+        <button class="print" onclick="window.print()">Download / Print</button>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="preview-section" id="resume">
+        <h1 id="rName">Your Name</h1>
+        <p class="sub">
+            <span id="rRole">Job Title</span> |
+            <span id="rEmail">email@example.com</span> |
+            <span id="rPhone">0000000000</span>
+        </p>
+
+        <h3>Summary</h3>
+        <p id="rSummary"></p>
+
+        <h3>Skills</h3>
+        <ul id="rSkills"></ul>
+
+        <h3>Education</h3>
+        <p id="rEducation"></p>
+
+        <h3>Experience</h3>
+        <p id="rExperience"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
