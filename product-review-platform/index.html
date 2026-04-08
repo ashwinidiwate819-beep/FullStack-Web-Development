@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Review Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside>
+        <h2>Products</h2>
+        <ul>
+            <li onclick="loadProduct('Camera')">📷 Camera</li>
+            <li onclick="loadProduct('Smartwatch')">⌚ Smartwatch</li>
+            <li onclick="loadProduct('Speaker')">🔊 Speaker</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <h1 id="title">Select a Product</h1>
+
+        <div class="form">
+            <input type="text" id="name" placeholder="Your Name">
+            
+            <select id="rating">
+                <option value="">Rating</option>
+                <option value="5">😍 Excellent</option>
+                <option value="4">😊 Good</option>
+                <option value="3">😐 Average</option>
+                <option value="2">😕 Poor</option>
+                <option value="1">😡 Bad</option>
+            </select>
+
+            <textarea id="comment" placeholder="Write your review..."></textarea>
+
+            <button onclick="addReview()">Post Review</button>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
