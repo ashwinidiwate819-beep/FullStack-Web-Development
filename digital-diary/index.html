@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Diary App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📔 My Digital Diary</h1>
+    <p>Write Your Thoughts Privately</p>
+</header>
+
+<section class="container">
+    <h2>New Diary Entry</h2>
+
+    <input type="date" id="date">
+    <textarea id="entry" placeholder="Write your thoughts here..."></textarea>
+
+    <button onclick="addEntry()">Save Entry</button>
+
+    <h2>Your Diary Entries</h2>
+    <div id="entries"></div>
+</section>
+
+<footer>
+    <p>© 2026 Digital Diary App | Secure & Personal</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

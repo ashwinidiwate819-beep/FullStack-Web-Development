@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎓 Online Course Enrollment</h1>
+    <p>Learn Skills. Build Career.</p>
+</header>
+
+<section class="courses">
+    <h2>Available Courses</h2>
+
+    <div class="course-grid">
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, Projects</p>
+            <button onclick="enroll('Web Development')">Enroll</button>
+        </div>
+
+        <div class="course-card">
+            <h3>Python Programming</h3>
+            <p>Basics to Advanced Python</p>
+            <button onclick="enroll('Python Programming')">Enroll</button>
+        </div>
+
+        <div class="course-card">
+            <h3>Data Science</h3>
+            <p>Python, ML, Visualization</p>
+            <button onclick="enroll('Data Science')">Enroll</button>
+        </div>
+
+        <div class="course-card">
+            <h3>UI / UX Design</h3>
+            <p>Figma, UX Research, Prototyping</p>
+            <button onclick="enroll('UI / UX Design')">Enroll</button>
+        </div>
+    </div>
+</section>
+
+<section class="enroll-form" id="formSection">
+    <h2>Student Enrollment Form</h2>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="email" id="email" placeholder="Email Address">
+    <input type="text" id="selectedCourse" placeholder="Selected Course" readonly>
+
+    <button onclick="submitEnrollment()">Submit Enrollment</button>
+</section>
+
+<section class="enrolled">
+    <h2>Enrolled Students</h2>
+    <div id="enrolledList"></div>
+</section>
+
+<footer>
+    <p>© 2026 Course Enrollment System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

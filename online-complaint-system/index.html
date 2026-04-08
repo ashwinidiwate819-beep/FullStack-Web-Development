@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complaint Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>🛠 Complaint Portal</h2>
+</nav>
+
+<div class="wrapper">
+
+    <div class="form-box">
+        <h3>Submit a Complaint</h3>
+
+        <input type="text" id="username" placeholder="Full Name">
+        <input type="email" id="useremail" placeholder="Email">
+
+        <select id="issue">
+            <option value="">Select Issue</option>
+            <option>Water</option>
+            <option>Electricity</option>
+            <option>Road</option>
+            <option>Internet</option>
+        </select>
+
+        <textarea id="details" placeholder="Complaint Details"></textarea>
+
+        <button onclick="submitComplaint()">Register</button>
+    </div>
+
+    <div class="list-box">
+        <h3>Complaint Records</h3>
+        <div id="records"></div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

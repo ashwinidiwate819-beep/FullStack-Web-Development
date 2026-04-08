@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-box" id="loginBox">
+    <h2>🔐 Password Manager</h2>
+    <p>Enter Master Password</p>
+    <input type="password" id="masterPass" placeholder="Master Password">
+    <button onclick="login()">Unlock</button>
+</div>
+
+<div class="container" id="app">
+    <h2>Saved Passwords</h2>
+
+    <div class="form">
+        <input type="text" id="site" placeholder="Website Name">
+        <input type="text" id="username" placeholder="Username / Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="savePassword()">Save</button>
+    </div>
+
+    <div id="passwordList"></div>
+    <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

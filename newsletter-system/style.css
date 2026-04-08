@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.subscribe-box {
+    margin-top: 30px;
+}
+
+.subscribe-box input {
+    padding: 12px;
+    width: 260px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.subscribe-box button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #00c6ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.subscribe-box button:hover {
+    background: #009edc;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Subscriber Section */
+.subscribers {
+    background: white;
+    color: #333;
+    padding: 40px 20px;
+}
+
+.subscribers h2 {
+    margin-bottom: 20px;
+}
+
+.subscriber {
+    background: #f4f6ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+footer {
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}

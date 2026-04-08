@@ -1,0 +1,96 @@
+* {
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(120deg, #232526, #414345);
+    color: white;
+}
+
+/* Login Screen */
+.login-box {
+    width: 350px;
+    margin: 120px auto;
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* App Screen */
+.container {
+    display: none;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 6px;
+}
+
+.entry {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.entry span {
+    display: block;
+}
+
+.delete {
+    background: crimson;
+    border: none;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
+
+.logout {
+    margin-top: 20px;
+    background: orange;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+}
