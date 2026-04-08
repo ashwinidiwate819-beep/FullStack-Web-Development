@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Polling App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📊 Online Polling App</h1>
+    <p>Share Opinions. View Results.</p>
+</header>
+
+<section class="poll">
+    <h2 id="question">Which technology do you like the most?</h2>
+
+    <div class="options">
+        <button onclick="vote(0)">Web Development</button>
+        <button onclick="vote(1)">AI & Machine Learning</button>
+        <button onclick="vote(2)">Data Science</button>
+        <button onclick="vote(3)">Cyber Security</button>
+    </div>
+
+    <div class="results" id="results"></div>
+</section>
+
+<footer>
+    <p>© 2026 Online Polling App</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
