@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🗳️ Online Voting System</h1>
+    <p>Your Vote Matters</p>
+</header>
+
+<section class="container">
+    <h2>Select Your Candidate</h2>
+
+    <div class="candidates">
+        <div class="card">
+            <h3>Candidate A</h3>
+            <button onclick="vote('A')">Vote</button>
+        </div>
+
+        <div class="card">
+            <h3>Candidate B</h3>
+            <button onclick="vote('B')">Vote</button>
+        </div>
+
+        <div class="card">
+            <h3>Candidate C</h3>
+            <button onclick="vote('C')">Vote</button>
+        </div>
+    </div>
+
+    <h2>Live Results</h2>
+    <div class="results">
+        <p>Candidate A: <span id="countA">0</span></p>
+        <p>Candidate B: <span id="countB">0</span></p>
+        <p>Candidate C: <span id="countC">0</span></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Online Voting System | Secure & Transparent</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

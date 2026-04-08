@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Royal Spice Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🍴 Royal Spice</div>
+    <nav>
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('starter')">Starters</button>
+        <button onclick="filterMenu('main')">Main Course</button>
+        <button onclick="filterMenu('dessert')">Desserts</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Delicious & Premium Food</h1>
+    <p>Experience the taste of luxury</p>
+</section>
+
+<section class="menu">
+
+    <div class="card starter">
+        <img src="https://source.unsplash.com/300x200/?paneer" alt="">
+        <h3>Paneer Tikka</h3>
+        <p>Smoky grilled cottage cheese</p>
+        <span>₹220</span>
+    </div>
+
+    <div class="card starter">
+        <img src="https://source.unsplash.com/300x200/?soup" alt="">
+        <h3>Veg Manchow Soup</h3>
+        <p>Hot & spicy Chinese soup</p>
+        <span>₹150</span>
+    </div>
+
+    <div class="card main">
+        <img src="https://source.unsplash.com/300x200/?biryani" alt="">
+        <h3>Veg Biryani</h3>
+        <p>Aromatic rice with spices</p>
+        <span>₹260</span>
+    </div>
+
+    <div class="card main">
+        <img src="https://source.unsplash.com/300x200/?paneer-curry" alt="">
+        <h3>Paneer Butter Masala</h3>
+        <p>Rich creamy tomato gravy</p>
+        <span>₹280</span>
+    </div>
+
+    <div class="card dessert">
+        <img src="https://source.unsplash.com/300x200/?gulab-jamun" alt="">
+        <h3>Gulab Jamun</h3>
+        <p>Soft & sweet delight</p>
+        <span>₹120</span>
+    </div>
+
+    <div class="card dessert">
+        <img src="https://source.unsplash.com/300x200/?ice-cream" alt="">
+        <h3>Ice Cream Sundae</h3>
+        <p>Chilled dessert special</p>
+        <span>₹140</span>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Royal Spice Restaurant | Designed Professionally</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
