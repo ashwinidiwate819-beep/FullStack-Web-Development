@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Post</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="post">
+  <h1 id="title"></h1>
+  <p id="content"></p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("title").innerText = params.get("title");
+document.getElementById("content").innerText = params.get("content");
+</script>
+
+</body>
+</html>
