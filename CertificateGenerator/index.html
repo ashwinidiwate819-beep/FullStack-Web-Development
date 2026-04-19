@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-box">
+        <h2>🎓 Certificate Generator</h2>
+
+        <input type="text" id="name" placeholder="Student Name">
+        <input type="text" id="course" placeholder="Course / Event Name">
+        <input type="date" id="date">
+
+        <button onclick="generate()">Generate Certificate</button>
+    </div>
+
+    <div class="certificate" id="certificate">
+        <h1>Certificate of Completion</h1>
+        <p>This is to certify that</p>
+        <h2 id="cname">Name</h2>
+        <p>has successfully completed</p>
+        <h3 id="ccourse">Course Name</h3>
+        <p>on</p>
+        <h4 id="cdate">Date</h4>
+
+        <div class="sign">
+            <span>Authorized Signature</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
