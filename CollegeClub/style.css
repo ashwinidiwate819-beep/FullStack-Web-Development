@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f9;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #eaec5f, #f9b35f);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Layout */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+}
+
+/* Form */
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.form-card h2 {
+    color: #1a1f2b;
+    margin-bottom: 15px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #c7d2fe;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #f3ae30;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Club Cards */
+.club-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+.club {
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-top: 5px solid #f59e0b;
+}
+
+.club h3 {
+    color: #1e293b;
+}
+
+.club span {
+    display: block;
+    margin-top: 5px;
+    color: #475569;
+}
