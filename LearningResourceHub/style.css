@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f8fafc;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #f286d0, #06b6d4);
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+/* Form Card */
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.form-card h2 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #06b6d4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Resource Cards */
+.resource-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.resource {
+    background: white;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-left: 6px solid #84cc16;
+}
+
+.resource h3 {
+    margin: 0;
+    color: #1e293b;
+}
+
+.resource span {
+    display: block;
+    margin-top: 6px;
+    color: #475569;
+}
+
+.resource a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #7c3aed;
+    font-weight: bold;
+    text-decoration: none;
+}
