@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Survey Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>📊 Online Survey Platform</h1>
+    <p class="tagline">Your opinion matters</p>
+
+    <div class="survey-box">
+        <h2 id="question">Which technology do you like most?</h2>
+
+        <form id="surveyForm">
+            <label><input type="radio" name="option" value="Web Development"> Web Development</label>
+            <label><input type="radio" name="option" value="Data Science"> Data Science</label>
+            <label><input type="radio" name="option" value="AI & ML"> AI & ML</label>
+            <label><input type="radio" name="option" value="Cyber Security"> Cyber Security</label>
+        </form>
+
+        <button onclick="submitSurvey()">Submit</button>
+    </div>
+
+    <div class="result-box">
+        <h3>📈 Survey Results</h3>
+        <ul id="results"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
