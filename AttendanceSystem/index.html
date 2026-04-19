@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Attendance Manager</h1>
+    <p>Smart & Simple Attendance System</p>
+  </header>
+
+  <div class="top-bar">
+    <input type="date" id="date">
+    <input type="text" id="studentName" placeholder="Student Name">
+    <button onclick="addStudent()">Add Student</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
+
+  <div class="summary">
+    <span id="presentCount">Present: 0</span>
+    <span id="absentCount">Absent: 0</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
