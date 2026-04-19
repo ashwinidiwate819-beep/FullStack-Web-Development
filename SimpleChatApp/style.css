@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #dfe6e9;
+    height: 100vh;
+}
+
+/* App Layout */
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background: #075e54;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #064c45;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.chat-list {
+    flex: 1;
+}
+
+.chat {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.chat.active {
+    background: #128c7e;
+}
+
+/* Chat Area */
+.chat-area {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    background: #ece5dd;
+}
+
+/* Header */
+.chat-header {
+    padding: 15px;
+    background: #075e54;
+    color: white;
+}
+
+/* Messages */
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    max-width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.sent {
+    background: #dcf8c6;
+    margin-left: auto;
+}
+
+.received {
+    background: white;
+    margin-right: auto;
+}
+
+.time {
+    font-size: 10px;
+    text-align: right;
+    color: gray;
+}
+
+/* Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: white;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    background: #075e54;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 18px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartTasker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SmartTasker</h1>
+  <input id="search" placeholder="Search tasks...">
+  <button id="themeToggle">🌙</button>
+</header>
+
+<section class="add-task">
+  <input id="taskText" placeholder="New task...">
+  <select id="priority">
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+  </select>
+  <input type="date" id="dueDate">
+  <button onclick="addTask()">Add</button>
+</section>
+
+<section class="stats">
+  <span id="count"></span>
+  <div class="progress">
+    <div id="bar"></div>
+  </div>
+</section>
+
+<ul id="taskList"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>

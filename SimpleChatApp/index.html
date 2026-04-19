@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Style Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://i.pravatar.cc/40" alt="user">
+            <span>Ashwini</span>
+        </div>
+
+        <div class="chat-list">
+            <div class="chat active">💬 College Group</div>
+            <div class="chat">👩‍💻 Project Team</div>
+            <div class="chat">👨‍🏫 Mentor</div>
+        </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+        <div class="chat-header">
+            <span>College Group</span>
+        </div>
+
+        <div class="messages" id="messages"></div>
+
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type a message">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
