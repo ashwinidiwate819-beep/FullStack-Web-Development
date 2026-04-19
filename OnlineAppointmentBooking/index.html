@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>BookMyAppointment</h1>
+    <p>Easy & Fast Appointment Booking</p>
+</header>
+
+<section class="booking">
+    <h2>Book an Appointment</h2>
+
+    <form id="appointmentForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Mobile Number" required>
+
+        <select required>
+            <option value="">Select Service</option>
+            <option>Doctor Consultation</option>
+            <option>Salon Service</option>
+            <option>Car Service</option>
+            <option>Business Meeting</option>
+        </select>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <button type="submit">Confirm Appointment</button>
+    </form>
+
+    <p id="successMessage"></p>
+</section>
+
+<footer>
+    <p>© 2026 BookMyAppointment | Online Appointment System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
