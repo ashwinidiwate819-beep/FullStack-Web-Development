@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>🩸 Blood Donation Management System</h1>
+    <p class="subtitle">Save lives by managing donors efficiently</p>
+
+    <div class="form-card">
+        <input id="name" placeholder="Donor Name">
+        <input id="group" placeholder="Blood Group (A+, O-, etc)">
+        <input id="city" placeholder="City">
+        <input id="contact" placeholder="Contact Number">
+        <button onclick="addDonor()">Register Donor</button>
+    </div>
+
+    <div class="donor-list" id="donorList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
