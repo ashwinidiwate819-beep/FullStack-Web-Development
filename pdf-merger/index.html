@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online PDF Merger</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PDF-Lib CDN -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>📄 Online PDF Merger</h1>
+    <p>Merge multiple PDF files into one</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <input type="file" id="pdfInput" accept="application/pdf" multiple>
+        <button onclick="mergePDFs()">Merge PDFs</button>
+
+        <div id="fileList"></div>
+
+        <a id="downloadLink" download="merged.pdf">⬇ Download Merged PDF</a>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
