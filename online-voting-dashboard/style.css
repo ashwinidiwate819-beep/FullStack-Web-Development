@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #F1F5F9;
+}
+
+/* Header */
+header {
+    background: #0F172A;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Poll Section */
+.poll {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.poll h2 {
+    margin-bottom: 20px;
+    color: #0F172A;
+}
+
+.poll button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #2563EB;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.poll button:hover {
+    background: #1D4ED8;
+}
+
+/* Results */
+.results {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.results h2 {
+    color: #0F172A;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.bar {
+    background: #E5E7EB;
+    height: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    background: #10B981;
+    width: 0%;
+    transition: width 0.4s ease;
+}
