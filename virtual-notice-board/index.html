@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Notice Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📌 Virtual Notice Board</h1>
+    <p>Post and view important announcements</p>
+</header>
+
+<section class="notice-form">
+    <input type="text" id="title" placeholder="Notice Title">
+    <textarea id="content" placeholder="Notice Details"></textarea>
+    <button onclick="addNotice()">Post Notice</button>
+</section>
+
+<section class="board" id="board"></section>
+
+<script src="script.js"></script>
+</body>
+</html>

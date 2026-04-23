@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #FFF7ED;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6D28D9, #8B5CF6);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Form */
+.notice-form {
+    max-width: 800px;
+    margin: 25px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.notice-form input,
+.notice-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+}
+
+.notice-form textarea {
+    height: 90px;
+    resize: none;
+}
+
+.notice-form button {
+    background: #F59E0B;
+    color: #1F2933;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notice-form button:hover {
+    background: #D97706;
+}
+
+/* Notice Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.notice {
+    background: white;
+    border-left: 8px solid #6D28D9;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    position: relative;
+}
+
+.notice h3 {
+    margin-top: 0;
+    color: #6D28D9;
+}
+
+.notice small {
+    color: #6B7280;
+}
+
+.notice button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #EF4444;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.notice button:hover {
+    background: #DC2626;
+}
