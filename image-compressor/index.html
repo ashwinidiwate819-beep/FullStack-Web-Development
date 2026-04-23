@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Image Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🖼️ Online Image Compressor</h1>
+    <p>Reduce image size without losing quality</p>
+</header>
+
+<div class="container">
+    <input type="file" id="imageInput" accept="image/*">
+    
+    <label>Compression Quality</label>
+    <input type="range" id="quality" min="10" max="100" value="70">
+    <span id="qualityValue">70%</span>
+
+    <button onclick="compressImage()">Compress Image</button>
+
+    <canvas id="canvas"></canvas>
+
+    <a id="downloadLink" download="compressed-image.jpg">Download Image</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

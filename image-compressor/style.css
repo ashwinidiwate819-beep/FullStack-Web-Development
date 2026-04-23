@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #FFFBEB;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #F97316, #FB923C);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Main Card */
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+#qualityValue {
+    color: #0D9488;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    background: #0D9488;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0F766E;
+}
+
+canvas {
+    margin-top: 20px;
+    max-width: 100%;
+    display: none;
+}
+
+#downloadLink {
+    display: none;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #F97316;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
