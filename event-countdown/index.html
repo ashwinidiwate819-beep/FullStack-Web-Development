@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Countdown App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>⏳ Event Countdown Dashboard</h1>
+    <p>Track your upcoming events in real time</p>
+</header>
+
+<section class="container">
+    <div class="add-event">
+        <input type="text" id="eventName" placeholder="Event Name">
+        <input type="datetime-local" id="eventDate">
+        <button onclick="addEvent()">Add Event</button>
+    </div>
+
+    <div class="events" id="events"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
